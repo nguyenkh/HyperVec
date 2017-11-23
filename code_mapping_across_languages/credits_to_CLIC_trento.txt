@@ -1,0 +1,1 @@
+A huge part of this code is taken from an implementation that used to be available at http://clic.cimec.unitn.it and was also used for the paper 'Improving zero-shot learning by mitigating the hubness problem' by  Georgiana Dinu, Angeliki Lazaridou, Marco Baroni https://arxiv.org/pdf/1412.6568.pdf.  
