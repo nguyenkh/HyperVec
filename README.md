@@ -13,7 +13,7 @@ Hierarchical Embeddings for Hypernymy Detection and Directionality
     in which: pos_tag is either NN (for the noun features) or VB (for the verb features)     
 
 ### Configuration
-See config.cfg to set agruments for model.
+See the config.cfg to set agruments for model.
 
 ### Training embeddings
   ```java -jar HyperVec.jar config.cfg vector-size window-size```
