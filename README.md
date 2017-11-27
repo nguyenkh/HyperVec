@@ -7,6 +7,7 @@ Hierarchical Embeddings for Hypernymy Detection and Directionality
 
 ### Preprocess
  - Create the feature files:
+ 
     ```python create_features.py -input corpus-file.txt -output output-file-name -pos pos_tag```
     in which: pos_tag is either NN (for the noun features) or VB (for the verb features)     
 
