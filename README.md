@@ -27,7 +27,12 @@ See the config.cfg to set agruments for model.
 
 Information about the embeddings: creatd using the ENCOW14A corpus (14.5bn token), 100 dimensions, sym. window of 5, 15 negative samples, 0.025 learning rate, threshhold set to 0.05. The resulting vocabulary contains about 2.7m words. 
   
- ` 
+### Example usage: Evaluation BLESS,BIBLESS and AWBLESS
+To reproduce our experiments from Table 3 use the code in the `datasets_classification/`, 
+assuming your vector file is located in the same folder and named `hypervec.txt.gz`. 
+  `java -jar eval-dir.jar hypervec.txt.gz` (Evaluate directionality on `BLESS.txt` using hyperscore)
+  `java -jar eval-bless.jar hypervec.txt.gz 2 1000` (Evaluate classification on `BIBLESS.txt, AWBLESS.txt` using 2% of the training data and 1000 random iterations)
+  
 
 ### Citation info
 If you use the code or the created feature norms, please [cite our paper (Bibtex)](http://www2.ims.uni-stuttgart.de/bibliographie/entry/2811b00e1bbd503adf28648ddb737132dc67a091/), the paper can be found here: [PDF](http://www.aclweb.org/anthology/D17-1022), the poster from EMNLP can be found here: [Poster](http://www.ims.uni-stuttgart.de/institut/mitarbeiter/koepermn/publications/poster_EMNLP2017.pdf)
