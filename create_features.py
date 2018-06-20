@@ -1,6 +1,6 @@
 import argparse
 import spacy
-from spacy.en import English
+from spacy.lang.en import English
 import gzip
 from collections import Counter, defaultdict
 import six.moves.cPickle as pickle
@@ -19,7 +19,8 @@ def main():
     args = parser.parse_args()
     
     nlp = English()
-    
+    nlp.add_pipe(nlp.create_pipe('sentencizer'))
+
     window_size = 5
     dfeatures = defaultdict(set)
         
@@ -35,7 +36,7 @@ def main():
             paragraph = paragraph.strip()
             if len(paragraph) == 0: continue
             para_num += 1
-            print 'Processing para: %d' %len(para_num)
+            print 'Processing para: %d' %para_num
             # Parse each sentence
             parsed_para = nlp(unicode(paragraph))
             for sent in parsed_para.sents:
@@ -43,7 +44,7 @@ def main():
                 dfeatures.update(features)
 
     id_to_vocab = {idx:word for word,idx in vocab_to_id.iteritems()}
-    save_file(dfeatures, id_to_vocab, outfile)
+    save_file(dfeatures, id_to_vocab, args.output)
     
     print 'Parsing corpus done....!'                    
 
