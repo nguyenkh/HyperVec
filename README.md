@@ -2,7 +2,7 @@
 Hierarchical Embeddings for Hypernymy Detection and Directionality
 
 ### Prerequisite
-  - [spaCy](https://spacy.io): for parsing
+  - [spaCy](https://spacy.io): for parsing, version 2.0.11
   - a corpus such as wikipedia corpus (plain-text)
 
 ### Preprocess
